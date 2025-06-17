@@ -4,51 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haris Kambiz - Author Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Suhana Kamboj - Bhindi Portfolio</title>
+  <link rel="stylesheet" href="style3.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
     <div class="hero-overlay">
-      <h1>Haris Kambiz</h1>
-      <p class="tagline">Educational • Sci-Fi • Kids</p>
+      <h1 class="animated-title">Suhana Kamboj</h1>
+      <p class="tagline">Bhindi • Sadi • Free</p>
     </div>
   </header>
 
-  <section class="about">
+  <section class="about fade-in-section">
     <h2>About Me</h2>
-    <p>
-      Haris Kambiz is a storyteller at the intersection of knowledge and imagination.
-      Blending the wonder of science fiction with the heart of education, his works aim
-      to inspire young minds and curious souls alike.
+    <img src="author2.jpg" alt="Animated Author Portrait" class="author-photo" />
+
+
+<p>
+      Suhana kamboj is a sadi bhindi that is sold free of cost at the local market. She is known for her vibrant personality and her ability to bring joy to those around her. With a passion for storytelling, she weaves tales that captivate the imagination and inspire others. Suhana believes in the power of community and often engages in local events to share her love for bhindi and sadi culture.
+      When she's not selling bhindi, you can find her exploring the local markets, connecting with fellow bhindi enthusiasts, and spreading positivity wherever she goes.
     </p>
   </section>
 
-  <section class="books">
+  <section class="vision fade-in-section">
+    <h2>My Vision</h2>
+    <p>
+      "through vegetables rooted in soil i will bring forth the nutritious values of a sadi bhindi  ."
+    </p>
+  </section>
+
+  <section class="books fade-in-section">
     <h2>Featured Works</h2>
     <div class="book-grid">
-      <div class="book-card placeholder">
+      <div class="book-card placeholder animated-card">
         <div class="book-cover"></div>
         <h3>Coming Soon</h3>
-        <p>New educational adventures launching soon.</p>
+        <p>New market adventures launching soon.</p>
       </div>
-      <div class="book-card placeholder">
+      <div class="book-card placeholder animated-card">
         <div class="book-cover"></div>
         <h3>Coming Soon</h3>
-        <p>Imaginative sci-fi for the next generation.</p>
+        <p>Imaginative fresh soil content for the next generation.</p>
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact fade-in-section">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:hariskambiz@gmail.com">hariskambiz@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/haris.kz3" target="_blank">@haris.kz3</a></p>
+    <p>Email: <a href="mailto:hariskambiz@gmail.com">sadibhindi@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/haris.kz3" target="_blank">@the_bhindi</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Haris Kambiz. All rights reserved.</p>
+    <p>&copy; 2025 sadi bhindi. All rights reserved.</p>
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in-section');
+    const appearOnScroll = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
